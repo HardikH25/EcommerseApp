@@ -8,16 +8,17 @@ function Wishlist() {
 
     if (wishlistItems.length === 0) {
         return (
-            <div className="min-h-[60vh] flex flex-col items-center justify-center p-4">
-                <div className="bg-red-500/10 border border-red-500/20 p-8 rounded-full mb-8 shadow-[0_0_30px_rgba(239,68,68,0.15)] relative overflow-hidden">
-                    <div className="absolute inset-0 bg-red-500/20 blur-xl"></div>
-                    <svg className="w-16 h-16 text-red-500 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <div className="min-h-[70vh] flex flex-col items-center justify-center p-8 relative overflow-hidden">
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-red-500/[0.02] to-transparent pointer-events-none"></div>
+                <div className="bg-red-500/5 border border-red-500/10 p-10 rounded-full mb-10 shadow-[0_0_50px_rgba(239,68,68,0.03)] relative group">
+                    <div className="absolute inset-0 bg-red-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <svg className="w-20 h-20 text-red-500/60 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-3">Your Vault is Empty</h2>
-                <p className="text-gray-400 mb-10 text-center text-lg max-w-md">Save luxury items you love so you don't lose sight of them.</p>
-                <Link to="/products" className="bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                <h2 className="text-4xl font-black text-white mb-4 tracking-tight">Your Vault is Empty</h2>
+                <p className="text-gray-400 mb-12 text-center text-xl font-light max-w-md leading-relaxed">Save the exceptional items you discover so they're never forgotten.</p>
+                <Link to="/products" className="bg-white text-black font-black py-5 px-12 rounded-full hover:bg-gray-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] active:scale-95 uppercase tracking-widest text-sm">
                     Explore Collection
                 </Link>
             </div>

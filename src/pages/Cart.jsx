@@ -9,16 +9,18 @@ function Cart() {
 
     if (cartItems.length === 0) {
         return (
-            <div className="min-h-[60vh] flex flex-col items-center justify-center p-4">
-                <div className="bg-white/5 border border-white/10 p-8 rounded-full mb-8 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
-                    <svg className="w-16 h-16 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            <div className="min-h-[70vh] flex flex-col items-center justify-center p-8 relative overflow-hidden">
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/[0.02] to-transparent pointer-events-none"></div>
+                <div className="bg-white/5 border border-white/10 p-10 rounded-full mb-10 shadow-[0_0_50px_rgba(255,255,255,0.03)] relative group">
+                    <div className="absolute inset-0 bg-white/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <svg className="w-20 h-20 text-gray-500 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-3">Your cart is empty</h2>
-                <p className="text-gray-400 mb-10 text-center text-lg">Looks like you haven't added anything to your cart yet.</p>
-                <Link to="/products" className="bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.15)]">
-                    Start Shopping
+                <h2 className="text-4xl font-black text-white mb-4 tracking-tight">Your Cart is a Workspace</h2>
+                <p className="text-gray-400 mb-12 text-center text-xl font-light max-w-md leading-relaxed">It seems you haven't curated any pieces yet. Start your journey below.</p>
+                <Link to="/products" className="bg-white text-black font-black py-5 px-12 rounded-full hover:bg-gray-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] active:scale-95 uppercase tracking-widest text-sm">
+                    Begin Shopping
                 </Link>
             </div>
         );

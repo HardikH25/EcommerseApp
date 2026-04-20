@@ -20,8 +20,25 @@ function ProductDetails() {
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
-                setProduct(response.data);
+                // Switching to DummyJSON as reliable fallback
+                const response = await axios.get(`https://dummyjson.com/products/${id}`);
+                const p = response.data;
+                
+                // Map DummyJSON structure to our existing UI expectations
+                const mappedProduct = {
+                    id: p.id,
+                    title: p.title,
+                    price: p.price,
+                    description: p.description,
+                    category: typeof p.category === 'object' ? p.category.name : p.category, 
+                    image: p.thumbnail,
+                    rating: {
+                        rate: p.rating,
+                        count: p.stock
+                    }
+                };
+                
+                setProduct(mappedProduct);
             } catch (error) {
                 console.error("Failed to fetch product details", error);
             } finally {
