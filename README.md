@@ -2,9 +2,6 @@
 
 A modern, responsive, and feature-rich front-end e-commerce application built with React and Vite. This project provides a seamless shopping experience with product listings, cart management, wishlist functionality, and a streamlined checkout process.
 
-## 🚀 Live Demo
-*(You can add your deployment link here)*
-
 ## 🛠️ Tech Stack
 
 This project leverages modern web technologies to ensure a fast, robust, and maintainable user experience.
